@@ -1,0 +1,44 @@
+Assistant (to User):
+I'll help you create a Python function to calculate factorial. Let me write the code for you.
+
+User (to Assistant):
+Please create a factorial function with proper error handling.
+
+Assistant (to User):
+I'll create a factorial function with error handling for you.
+
+EXECUTING CODE BLOCK:
+```python
+def factorial(n):
+    """Calculate factorial of a number with error handling."""
+    if not isinstance(n, int):
+        raise TypeError("Input must be an integer")
+    if n < 0:
+        raise ValueError("Input must be non-negative")
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+# Test the function
+print(f"factorial(5) = {factorial(5)}")
+print(f"factorial(0) = {factorial(0)}")
+```
+
+exitcode: 0
+Output:
+factorial(5) = 120
+factorial(0) = 1
+
+Assistant (to User):
+The factorial function has been successfully created with proper error handling. It includes:
+- Type checking to ensure input is an integer
+- Value checking to ensure input is non-negative
+- Correct handling of edge cases (0 and 1)
+- Efficient iterative calculation
+
+The test results show that factorial(5) = 120 and factorial(0) = 1, which are correct.
+
+TERMINATE 

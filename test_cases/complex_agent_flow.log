@@ -1,0 +1,40 @@
+[START] 复杂任务：分析代码并修复bug
+[THINKING] 用户需要我分析一个Python项目中的性能问题
+[ACTION] analyze_codebase: 扫描项目结构
+[RESULT] 发现项目包含150个Python文件，总计2万行代码
+
+[DECISION] 需要缩小搜索范围，先找出性能瓶颈
+[ACTION] run_profiler: 对主程序进行性能分析
+[RESULT] 发现数据处理模块占用了85%的执行时间
+
+[THINKING] 数据处理模块存在性能问题，需要深入分析
+[ACTION] read_file: 读取data_processor.py
+[RESULT] 文件包含复杂的嵌套循环和重复计算
+
+[DECISION] 发现问题：在循环中重复进行相同的计算
+[ACTION] optimize_code: 使用缓存优化重复计算
+[ERROR] 优化失败：代码依赖关系复杂，直接修改可能破坏功能
+
+[THINKING] 需要更谨慎的方法，先编写测试确保功能正确
+[ACTION] generate_tests: 为data_processor模块生成单元测试
+[RESULT] 成功生成15个测试用例，覆盖率达到92%
+
+[ACTION] run_tests: 运行所有测试
+[RESULT] 所有测试通过，可以安全地进行优化
+
+[DECISION] 现在可以安全地优化代码
+[ACTION] refactor_code: 提取公共计算，使用memorization
+[RESULT] 重构成功，代码行数减少30%
+
+[ACTION] benchmark_performance: 测试优化后的性能
+[RESULT] 性能提升3.5倍，执行时间从120秒降至34秒
+
+[THINKING] 优化成功，但还可以进一步改进
+[ACTION] parallel_processing: 实现并行处理
+[RESULT] 性能再提升2倍，总执行时间降至17秒
+
+[DECISION] 性能优化目标达成，准备提交代码
+[ACTION] create_pull_request: 创建PR并添加详细说明
+[RESULT] PR #42 创建成功，包含性能对比图表
+
+[END] 任务完成：成功将性能提升7倍 

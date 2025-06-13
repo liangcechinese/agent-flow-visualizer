@@ -1,0 +1,13 @@
+> Entering new AgentExecutor chain...
+Thought: I need to search for information about the weather in Tokyo
+Action: web_search[weather Tokyo today]
+Observation: Current weather in Tokyo: 22°C, partly cloudy with 60% humidity
+
+Thought: Now I should also check the forecast for tomorrow
+Action: weather_api[Tokyo, tomorrow]
+Observation: Tomorrow's forecast: 24°C, sunny with 0% chance of rain
+
+Thought: I have gathered all the necessary weather information
+Final Answer: Current weather in Tokyo is 22°C and partly cloudy. Tomorrow will be warmer at 24°C with sunny skies.
+
+> Finished chain. 
